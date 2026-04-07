@@ -1,6 +1,6 @@
 CC = gcc
 TAR = prime_birthday
-OBJ = prime_birthday.o prime.o mystack.o bitmap.o
+OBJ = prime_birthday.o prime.o mystack.o bitmap.o date.o
 
 $(TAR):$(OBJ)
 	$(CC) $^ -o $@ -lm
@@ -10,4 +10,4 @@ $(TAR):$(OBJ)
 
 .PHONY:clean
 clean:
-	rm -f *.o
+	rm -f *.o $(TAR)

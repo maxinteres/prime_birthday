@@ -57,3 +57,14 @@ void free_stack(Stack_ul *stack) {
   free(stack);
 }
 
+char in_stack(Stack_ul *s, ul num) {
+  if (s == NULL)
+    return 0;
+  
+  size_t i;
+  for (i = 0; i < s->length; i++)
+    if (s->array[i] == num)
+      return 1;
+  return 0;
+}
+

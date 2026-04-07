@@ -16,5 +16,6 @@ Stack_ul *push_stack(Stack_ul *s, ul num);
 Stack_ul *pop_stack(Stack_ul *s);
 ul top_stack(Stack_ul *s);
 void free_stack(Stack_ul *stack);
+char in_stack(Stack_ul *s, ul num);
 
 #endif
