@@ -1,6 +1,9 @@
 #ifndef DATE_H
 #define DATE_H
 
+#include <stdlib.h>
+#include<stdio.h>
+
 #define leap_year(year) ((year)%400==0||(((year)%4==0&&(year)%100!=0)))
 typedef unsigned long ul;
 typedef struct date {
@@ -9,6 +12,7 @@ typedef struct date {
   unsigned int date;
 } Date;
 char legal_date(Date *);
-Date ul2Date(ul);
+Date *ul2Date(ul);
+void print_date(Date *d);
 
 #endif

@@ -13,10 +13,14 @@ char legal_date(Date *date) {
   return 1;
 }
 
-Date ul2Date(ul num) {
-  Date result_date;
-  result_date.date = num % 100;
-  result_date.month = (num / 100) % 100;
-  result_date.year = num / 10000;
+Date *ul2Date(ul num) {
+  Date *result_date=malloc(sizeof(Date));
+  result_date->date = num % 100;
+  result_date->month = (num / 100) % 100;
+  result_date->year = num / 10000;
   return result_date;
+}
+
+void print_date(Date *d) {
+  printf("%d-%d-%d", d->year, d->month, d->date);
 }
