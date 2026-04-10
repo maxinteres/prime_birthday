@@ -9,7 +9,7 @@
 
 Stack_ul *euler_filter(ul n) {
   /*
-get primes under n
+get primes under n include n
    */
   Stack_ul *primes = get_stack(est_size(n));
   bitmap is_n_prime=get_bitmap(n+1);
